@@ -1,0 +1,5 @@
+﻿  Personnage.cpp
+C:\POO\POO\1 VS 1\1 VS 1\Personnage.cpp(2,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'Personnage.hpp' : No such file or directory
+  Pouvoir.cpp
+C:\POO\POO\1 VS 1\1 VS 1\Pouvoir.cpp(2,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'Pouvoir.hpp' : No such file or directory
+  Génération de code en cours...

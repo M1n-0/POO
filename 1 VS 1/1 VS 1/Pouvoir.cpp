@@ -5,7 +5,7 @@
 Pouvoir::Pouvoir(std::string transformer, std::string absorber, std::string lancer, std::string generer) : m_transformer(transformer), m_absorber(absorber), m_lancer(lancer), m_(generer)
 
 
-void Pouvoir::feu()		
+void Pouvoir::feu()
 {
 
 }
@@ -49,5 +49,3 @@ Pouvoir::~Pouvoir()
 {
 
 }
-
-

@@ -127,9 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Personnage.hpp" />
     <ClInclude Include="Pouvoir.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Personnage.cpp" />
     <ClCompile Include="Pouvoir.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
