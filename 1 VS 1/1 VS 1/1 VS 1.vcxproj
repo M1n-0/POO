@@ -21,9 +21,11 @@
   <ItemGroup>
     <ClInclude Include="Attaque.hpp" />
     <ClInclude Include="Defence.hpp" />
-    <ClInclude Include="Personage.hpp" />
+    <ClInclude Include="Jeu.hpp" />
+    <ClInclude Include="Personnage.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Jeu.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

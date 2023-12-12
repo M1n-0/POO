@@ -14,7 +14,7 @@ public:
 	void setDefence(int defence) { mDefence = defence; }
 	void setNom(std::string nom) { mNom = nom; }
 private:
-	std::string mNom; 
-	int mDefence = 0;	
+	std::string mNom;
+	int mDefence = 0;
 	int mEnergie = 0;
 };

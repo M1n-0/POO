@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "Personage.hpp"
+#include "Jeu.hpp"
 
 
 template <typename T>
@@ -12,7 +12,9 @@ void print(T valeur) {
 
 
 int main() {
-	print("choisissez votre personnage : ");
+	Jeu jeu;
+
+	
 
 	return 0;
 }
