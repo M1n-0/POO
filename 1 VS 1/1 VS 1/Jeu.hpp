@@ -29,6 +29,7 @@ public:
 				return mAttaques[i];
 			}
 		}
+		return Attaque("Mince Alors!", -50000);
 	}
 	Defence getDefence(std::string nom) {
 		for (int i = 0; i < mDefences.size(); i++) {
@@ -36,6 +37,7 @@ public:
 				return mDefences[i];
 			}
 		}
+		return Defence("Mince Alors!", -50000, 50000);
 	}
 
 	void afficherGentils() {
