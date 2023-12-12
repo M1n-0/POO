@@ -45,6 +45,28 @@ public:
 			std::cout  << (i + 1) << ": " << mGentil[i].getNom() << "  Vie: " << mGentil[i].getVie() << " - Energie: " << mGentil[i].getEnergie() << std::endl;
 		}
 	}
+	std::vector<std::string> getNomGentils() {
+		std::vector<std::string> gentils;
+		for (int i = 0; i < mGentil.size(); i++) {
+			gentils.push_back(mGentil[i].getNom() + " Vie: " + std::to_string(mGentil[i].getVie()) + " - Energie: " + std::to_string(mGentil[i].getEnergie()));
+		}
+		return gentils;
+	}
+	std::vector<std::string> getNomMechants() {
+		std::vector<std::string> mechants;
+		for (int i = 0; i < mMechant.size(); i++) {
+			mechants.push_back(mMechant[i].getNom() + " Vie: " + std::to_string(mMechant[i].getVie()) + " - Energie: " + std::to_string(mMechant[i].getEnergie()));
+		}
+		return mechants;
+	}
+	std::vector<std::string> getNomPersonnages(bool gentil) {
+		if (gentil) {
+			return getNomGentils();
+		}
+		else {
+			return getNomMechants();
+		}
+	}
 	void afficherMechants() {
 		for (int i = 0; i < mMechant.size(); i++) {
 			std::cout << (i + 1) << ": " << mMechant[i].getNom() << "  Vie: " << mMechant[i].getVie() << " - Energie: " << mMechant[i].getEnergie() << std::endl;
@@ -69,10 +91,10 @@ public:
 	}
 	Personnage getPersonnage(int choix, bool gentil) {
 		if (gentil) {
-			return mGentil[choix - 1];
+			return mGentil[choix];
 		}
 		else {
-			return mMechant[choix - 1];
+			return mMechant[choix];
 		}
 	}
 private:

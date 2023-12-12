@@ -22,6 +22,7 @@
     <ClInclude Include="Attaque.hpp" />
     <ClInclude Include="Defence.hpp" />
     <ClInclude Include="Jeu.hpp" />
+    <ClInclude Include="Joueur.hpp" />
     <ClInclude Include="Personnage.hpp" />
   </ItemGroup>
   <ItemGroup>

@@ -12,7 +12,7 @@ Jeu::Jeu() {
 void Jeu::CreerAttaques() {
 	// ajouterAttaque prend en parametre le nom de l'attaque et les degats infliges
 	ajouterAttaque("Tornarde", 69);
-	ajouterAttaque("Meteore ", 88);
+	ajouterAttaque("Meteore", 88);
 }
 void Jeu::CreerDefences() {
 	// ajouterDefence prend en parametre le nom de la defense et le nombre de degats bloques ainsi que le cout en energie
