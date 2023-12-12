@@ -5,50 +5,50 @@
 
 class Entite {
 public:
-    // Constructeur par défaut
-    Entite() : nom("Entité"), pointsDeVie(100) {}
+    // Constructeur par dï¿½faut
+    Entite() : nom("Entite"), pointsDeVie(100) {}
 
-    // Constructeur avec paramètres
+    // Constructeur avec paramï¿½tres
     Entite(const std::string& nom, int pointsDeVie) : nom(nom), pointsDeVie(pointsDeVie) {}
 
-    // Méthode pour recevoir des dégâts
+    // Mï¿½thode pour recevoir des dï¿½gï¿½ts
     virtual void recevoirDegats(int degats) {
         pointsDeVie -= degats;
 
-        // Assurer que les points de vie ne deviennent pas négatifs
+        // Assurer que les points de vie ne deviennent pas nï¿½gatifs
         if (pointsDeVie < 0) {
             pointsDeVie = 0;
         }
 
-        std::cout << nom << " a subi " << degats << " points de dégâts. Points de vie restants : " << pointsDeVie << std::endl;
+        std::cout << nom << " a subi " << degats << " points de degats. Points de vie restants : " << pointsDeVie << std::endl;
 
-        // Vérifier si l'entité est encore en vie
+        // Vï¿½rifier si l'entitï¿½ est encore en vie
         if (pointsDeVie == 0) {
             std::cout << nom << " est KO !" << std::endl;
         }
     }
 
-    // Méthode pour afficher les informations de l'entité
+    // MÃ©thode pour afficher les informations de l'entitï¿½
     virtual void afficher() const {
         std::cout << "Nom: " << nom << ", Points de vie: " << pointsDeVie << std::endl;
     }
 
-    // Getter pour le nom de l'entité
+    // Getter pour le nom de l'entitï¿½
     std::string getNom() const {
         return nom;
     }
 
-    // Getter pour les points de vie de l'entité
+    // Getter pour les points de vie de l'entitï¿½
     int getPointsDeVie() const {
         return pointsDeVie;
     }
 
-    // Setter pour le nom de l'entité
+    // Setter pour le nom de l'entitï¿½
     void setNom(const std::string& nouveauNom) {
         nom = nouveauNom;
     }
 
-    // Setter pour les points de vie de l'entité
+    // Setter pour les points de vie de l'entitï¿½
     void setPointsDeVie(int nouveauxPointsDeVie) {
         pointsDeVie = nouveauxPointsDeVie;
     }
@@ -61,16 +61,16 @@ private:
     int pointsDeVie;
 };
 
-// Exemple de classe dérivée (Personnage) de la classe mère (Entite)
+// Exemple de classe dÃ©rivÃ©e (Personnage) de la classe mÃ©re (Entite)
 class Personnage : public Entite {
 public:
-    // Constructeur avec paramètres spécifique au personnage
+    // Constructeur avec paramÃ¨tres spï¿½cifique au personnage
     Personnage(const std::string& nom, int pointsDeVie, int niveau) : Entite(nom, pointsDeVie), niveau(niveau) {}
 
-    // Redéfinition de la méthode pour afficher les informations du personnage
+    // Redï¿½finition de la mï¿½thode pour afficher les informations du personnage
     void afficher() const override {
         std::cout << "Personnage - ";
-        Entite::afficher();  // Appel de la méthode de la classe mère
+        Entite::afficher();  // Appel de la mï¿½thode de la classe mï¿½re
         std::cout << "Niveau : " << niveau << std::endl;
     }
 
@@ -81,16 +81,16 @@ private:
 
 class CoupDePoings {
 public:
-    // Constructeur par défaut
+    // Constructeur par dï¿½faut
     CoupDePoings() : nom("Coup de poings"), force(5) {}
 
-    // Constructeur avec paramètres
+    // Constructeur avec paramï¿½tres
     CoupDePoings(const std::string& nom, int force) : nom(nom), force(force) {}
 
-    // Méthode virtuelle pure pour attaquer avec les poings
+    // Mï¿½thode virtuelle pure pour attaquer avec les poings
     virtual void attaquer() const = 0;
 
-    // Méthode pour afficher les informations du coup de poings
+    // Mï¿½thode pour afficher les informations du coup de poings
     void afficher() const {
         std::cout << "Coup de poings : " << nom << ", Force : " << force << std::endl;
     }
@@ -123,18 +123,18 @@ private:
     int force;
 };
 
-// Exemple de classe dérivée (Coup de poings rapide) de la classe mère (CoupDePoings)
+// Exemple de classe dï¿½rivï¿½e (Coup de poings rapide) de la classe mï¿½re (CoupDePoings)
 class CoupDePoingsRapide : public CoupDePoings {
 public:
-    // Constructeur avec paramètres spécifique au coup de poings rapide
+    // Constructeur avec paramï¿½tres spï¿½cifique au coup de poings rapide
     CoupDePoingsRapide(const std::string& nom, int force, int vitesse) : CoupDePoings(nom, force), vitesse(vitesse) {}
 
-    // Implémentation de la méthode virtuelle pure pour attaquer avec les poings
+    // Implï¿½mentation de la mï¿½thode virtuelle pure pour attaquer avec les poings
     void attaquer() const override {
         std::cout << "Attaque rapide avec les poings !" << std::endl;
     }
 
-    // Méthode spécifique au coup de poings rapide pour afficher des informations supplémentaires
+    // Mï¿½thode spï¿½cifique au coup de poings rapide pour afficher des informations supplï¿½mentaires
     void afficherVitesse() const {
         std::cout << "Vitesse du coup de poings rapide : " << vitesse << " m/s" << std::endl;
     }
